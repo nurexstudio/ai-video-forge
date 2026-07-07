@@ -51,6 +51,9 @@ export default defineConfig({
   },
   // Performance hints
   server: {
+    host: "0.0.0.0",
+    port: 5000,
+    allowedHosts: true,
     // Keep HMR on, but disable full-screen error overlay
     hmr: {
       overlay: false,

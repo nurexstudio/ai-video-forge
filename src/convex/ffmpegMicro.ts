@@ -175,7 +175,7 @@ export const transcodeFromUrl = action({
     quality: v.optional(v.string()),
     resolution: v.optional(v.string()),
   },
-  handler: async (ctx, args) => {
+  handler: async (ctx, args): Promise<any> => {
     // Get presigned URL
     const presigned: any = await ctx.runAction((api as any).ffmpegMicro.getPresignedUrl, {
       filename: `input_${Date.now()}.mp4`,

@@ -148,7 +148,7 @@ export const storeEmbedding = action({
     sourceText: v.string(),
     summary: v.optional(v.string()),
   },
-  handler: async (ctx, args) => {
+  handler: async (ctx, args): Promise<any> => {
     const userId = await getAuthUserId(ctx);
     if (!userId) throw new Error("Unauthorized");
 
@@ -172,7 +172,7 @@ export const semanticSearch = action({
     query: v.string(),
     topK: v.optional(v.number()),
   },
-  handler: async (ctx, args) => {
+  handler: async (ctx, args): Promise<any> => {
     const userId = await getAuthUserId(ctx);
     if (!userId) throw new Error("Unauthorized");
 

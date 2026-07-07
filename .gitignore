@@ -36,3 +36,4 @@ node_modules/.tmp/
 
 # Convex generated (auto-created by convex dev)
 src/convex/_generated
+attached_assets/

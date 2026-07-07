@@ -762,7 +762,7 @@ app.post("/api/download-info", async (req, res) => {
 });
 
 // ─── Start server ────────────────────────────────────────────────────────────
-app.listen(PORT, () => {
+app.listen(PORT, "0.0.0.0", () => {
   console.log(`\n  🎬 ClipForge Video Server`);
   console.log(`  ────────────────────────`);
   console.log(`  Port:     ${PORT}`);

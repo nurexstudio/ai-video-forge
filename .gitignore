@@ -35,5 +35,5 @@ isolate
 node_modules/.tmp/
 
 # Convex generated (auto-created by convex dev)
-src/convex/_generated
+# src/convex/_generated — committed so Vercel can build without deploy key
 attached_assets/

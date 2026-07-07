@@ -1,0 +1,50 @@
+{
+  "//": "effects.registry.json — Dynamic Effects Registry (Open/Closed Principle)",
+  "//_description": "أضف أي مؤثر جديد هنا، وسيظهر تلقائياً في واجهة Agent Terminal وفي شريط أدوات الاستوديو دون الحاجة لإعادة بناء الواجهة",
+  "version": "1.0.0",
+  "effects": [
+    {
+      "id": "zoom_pan",
+      "name": "Ken Burns Zoom",
+      "command": "/effects zoom_pan",
+      "scriptPath": "video-server:apply-effects",
+      "category": "motion",
+      "iconName": "ZoomIn",
+      "description": "تأثير التكبير البطيء (Ken Burns) لإضافة حركة للصور الثابتة",
+      "params": {
+        "zoomSpeed": 1.03,
+        "duration": "auto"
+      },
+      "compatibleTypes": ["image", "video"]
+    },
+    {
+      "id": "vignette",
+      "name": "Vignette",
+      "command": "/vignette",
+      "scriptPath": "video-server:apply-effects",
+      "category": "color",
+      "iconName": "Circle",
+      "description": "تأثير التظليل الدائري لتغميق الحواف وتركيز الانتباه على المركز",
+      "params": {
+        "intensity": 0.3,
+        "feather": 0.5
+      },
+      "compatibleTypes": ["video", "image"]
+    },
+    {
+      "id": "film_grain",
+      "name": "Film Grain",
+      "command": "/effects grain",
+      "scriptPath": "video-server:apply-effects",
+      "category": "texture",
+      "iconName": "Sparkles",
+      "description": "إضافة حبيبات الفيلم السينمائي لإضفاء طابع كلاسيكي أو فني",
+      "params": {
+        "intensity": 3,
+        "type": "gaussian"
+      },
+      "compatibleTypes": ["video", "image"]
+    }
+  ],
+  "//_usage": "لإضافة مؤثر جديد: أضف كائن JSON يحتوي على id, name, command, scriptPath, category, و params. سيتعرف عليه الـ Agent تلقائياً عند بدء التشغيل التالي"
+}
